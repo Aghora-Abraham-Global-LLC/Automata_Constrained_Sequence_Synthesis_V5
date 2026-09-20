@@ -489,8 +489,9 @@ export const App: React.FC = () => {
           <button
             onClick={() => setIsCitationOpen(true)}
             className="hover:text-cyan-400 transition cursor-pointer"
+            title="Applet Zenodo DOI: 10.5281/zenodo.22851432"
           >
-            DOI: 10.5281/zenodo.22851183
+            DOI: 10.5281/zenodo.22851432
           </button>
           <span>&middot;</span>
           <button
@@ -500,7 +501,13 @@ export const App: React.FC = () => {
             0 API Tokens (100% Local Engine)
           </button>
           <span>&middot;</span>
-          <span>MIT License</span>
+          <button
+            onClick={() => setIsCitationOpen(true)}
+            className="hover:text-cyan-400 transition cursor-pointer"
+            title="Creative Commons Attribution 4.0 International"
+          >
+            Zenodo Open Access (CC BY 4.0)
+          </button>
         </div>
       </footer>
 

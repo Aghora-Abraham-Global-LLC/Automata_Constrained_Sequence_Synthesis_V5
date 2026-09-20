@@ -2,11 +2,11 @@ cff-version: 1.2.0
 message: "If you use this software, please cite both the paper and the software reference implementation."
 title: "Phase-Synchronized Trajectory Optimization in Synthetic Multi-Agent Systems: Adaptive Extended Symplectic Control and Planar Braid Complexity (Version 5.0 Reference Implementation)"
 version: 5.0.0
-doi: 10.5281/zenodo.22851183
+doi: 10.5281/zenodo.22851432
 date-released: 2026-09-20
-url: "https://github.com/bhutadamarasena/automata-constrained-sequence-synthesis"
-repository-code: "https://github.com/bhutadamarasena/automata-constrained-sequence-synthesis"
-license: MIT
+url: "https://doi.org/10.5281/zenodo.22851432"
+repository-code: "https://github.com/Aghora-Abraham-Global-LLC/Automata_Constrained_Sequence_Synthesis_V5"
+license: CC-BY-4.0
 authors:
   - family-names: "Ghulam-e-Shah-e-Unmani"
     given-names: "Arya Arunachala Ananda"
@@ -21,6 +21,13 @@ keywords:
   - "post-newtonian-mechanics"
   - "multi-agent-systems"
   - "trajectory-optimization"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22851432"
+    description: "Official Reference Implementation Zenodo Software DOI"
+  - type: doi
+    value: "10.5281/zenodo.22851183"
+    description: "Theoretical Monograph Zenodo Preprint DOI"
 preferred-citation:
   type: article
   authors:

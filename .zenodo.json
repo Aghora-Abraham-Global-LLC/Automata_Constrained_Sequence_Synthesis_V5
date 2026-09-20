@@ -8,7 +8,7 @@
     }
   ],
   "access_right": "open",
-  "license": "MIT",
+  "license": "cc-by-4.0",
   "keywords": [
     "symplectic-integrators",
     "poincare-phase-space",
@@ -18,10 +18,12 @@
     "post-newtonian",
     "multi-agent-systems",
     "strang-splitting",
-    "computational-physics"
+    "computational-physics",
+    "zenodo-open-access"
   ],
   "upload_type": "software",
   "version": "5.0.0",
+  "doi": "10.5281/zenodo.22851432",
   "related_identifiers": [
     {
       "relation": "isSupplementTo",

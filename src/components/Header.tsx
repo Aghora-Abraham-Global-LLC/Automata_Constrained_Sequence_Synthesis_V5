@@ -125,7 +125,7 @@ export const Header: React.FC<HeaderProps> = ({
             title="Click to view permanent Zenodo DOI & BibTeX citation"
           >
             <Bookmark className="w-3.5 h-3.5 text-cyan-400" />
-            <span>DOI: 10.5281/zenodo.22851183</span>
+            <span>DOI: 10.5281/zenodo.22851432</span>
           </button>
 
           {/* DFA State Badge */}

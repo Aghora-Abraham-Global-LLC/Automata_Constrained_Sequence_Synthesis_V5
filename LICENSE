@@ -1,30 +1,45 @@
-MIT License
+Zenodo Academic Open-Access Software License
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Permanent Applet Zenodo DOI: https://doi.org/10.5281/zenodo.22851432
+Accompanying Monograph DOI: https://doi.org/10.5281/zenodo.22851183
 
 Copyright (c) 2026 Arya Arunachala Ananda Ghulam-e-Shah-e-Unmani
 BhutaDamaraSena R&D Labs · Aghora Abraham Global LLC
+Contact: research@bhutadamarasena.com
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+You are free to:
+1. Share — copy and redistribute the material in any medium or format.
+2. Adapt — remix, transform, and build upon the material for academic research,
+   computational validation, scientific benchmarking, or technical evaluation.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Under the following terms:
+* Attribution — You must give appropriate credit to the author, provide a link to the
+  Zenodo DOI (https://doi.org/10.5281/zenodo.22851432), and indicate if changes were made.
+  You may do so in any reasonable manner, but not in any way that suggests the licensor
+  endorses you or your use.
+* No additional restrictions — You may not apply legal terms or technological measures
+  that legally restrict others from doing anything the license permits.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Academic Citation Requirement:
+Any published research, academic publication, thesis, or commercial implementation that
+utilizes the mathematical algorithms, numerical integrators, or codebase from this work
+must cite:
+  Applet Software Citation:
+    Ghulam-e-Shah-e-Unmani, A. A. A. (2026). Phase-Synchronized Trajectory Optimization
+    in Synthetic Multi-Agent Systems: Adaptive Extended Symplectic Control and Planar
+    Braid Complexity (Version 5.0 Reference Implementation) [Software]. Zenodo.
+    DOI: 10.5281/zenodo.22851432
 
-Academic Citation Request:
-If this software or any part of its mathematical/computational formulations is used
-in academic research, publications, or industrial simulations, please cite the
-accompanying paper and Zenodo DOI:
-  DOI: 10.5281/zenodo.22851183
-  Title: Phase-Synchronized Trajectory Optimization in Synthetic Multi-Agent Systems:
-         Adaptive Extended Symplectic Control and Planar Braid Complexity (Version 5.0)
+  Theoretical Monograph Citation:
+    Ghulam-e-Shah-e-Unmani, A. A. A. (2026). Phase-Synchronized Trajectory Optimization
+    in Synthetic Multi-Agent Systems: Adaptive Extended Symplectic Control and Planar
+    Braid Complexity (Version 5.0).
+    DOI: 10.5281/zenodo.22851183
+
+Disclaimer:
+THIS RESEARCH SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES.

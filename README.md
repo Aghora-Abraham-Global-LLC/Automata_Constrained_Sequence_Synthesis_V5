@@ -1,17 +1,19 @@
 # Automata Constrained Sequence Synthesis (Version 5.0)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22851183.svg)](https://doi.org/10.5281/zenodo.22851183)
+[![Applet DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22851432.svg)](https://doi.org/10.5281/zenodo.22851432)
+[![Monograph DOI](https://img.shields.io/badge/Preprint%20DOI-10.5281%2Fzenodo.22851183-blue)](https://doi.org/10.5281/zenodo.22851183)
 [![CI & Build Verification](https://github.com/bhutadamarasena/automata-constrained-sequence-synthesis/actions/workflows/ci.yml/badge.svg)](https://github.com/bhutadamarasena/automata-constrained-sequence-synthesis/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![TypeScript](https://img.shields.io/badge/Language-TypeScript%205-blue)](https://www.typescriptlang.org/)
-[![Symplectic Conservation](https://img.shields.io/badge/Energy%20Drift-%7C%CE%94H%2FH₀%7C%20%3C%2010%E2%81%BB%E2%81%B5-emerald)](https://doi.org/10.5281/zenodo.22851183)
-[![API Overhead](https://img.shields.io/badge/External%20API%20Calls-0%20(100%25%20Local)-brightgreen)](https://doi.org/10.5281/zenodo.22851183)
+[![Symplectic Conservation](https://img.shields.io/badge/Energy%20Drift-%7C%CE%94H%2FH₀%7C%20%3C%2010%E2%81%BB%E2%81%B5-emerald)](https://doi.org/10.5281/zenodo.22851432)
+[![API Overhead](https://img.shields.io/badge/External%20API%20Calls-0%20(100%25%20Local)-brightgreen)](https://doi.org/10.5281/zenodo.22851432)
 
 > **Official Reference Software Implementation** for the theoretical monograph:  
 > **"Phase-Synchronized Trajectory Optimization in Synthetic Multi-Agent Systems: Adaptive Extended Symplectic Control and Planar Braid Complexity" (Version 5.0)**  
 > **Author**: Arya Arunachala Ananda Ghulam-e-Shah-e-Unmani  
 > **Institutions**: *BhutaDamaraSena R&D Labs* &middot; *Aghora Abraham Global LLC*  
-> **Preprint DOI**: [10.5281/zenodo.22851183](https://doi.org/10.5281/zenodo.22851183)  
+> **Applet Software DOI**: [10.5281/zenodo.22851432](https://doi.org/10.5281/zenodo.22851432)  
+> **Theoretical Monograph DOI**: [10.5281/zenodo.22851183](https://doi.org/10.5281/zenodo.22851183)  
 > **Primary AMS Classifications**: `70H15`, `65P10`, `57K10`, `37N05`, `49M30` &middot; **PACS**: `05.45.Xt`, `02.60.Cb`
 
 ---
@@ -57,7 +59,7 @@ The entire computational engine is written in pure, high-performance TypeScript 
 .
 ├── CITATION.cff               # GitHub & Zenodo Citation metadata
 ├── .zenodo.json               # Zenodo automated archival & DOI registration
-├── LICENSE                    # MIT Open-Source License
+├── LICENSE                    # Zenodo Open Access Academic License (CC BY 4.0)
 ├── autometa_v5_mod.tex        # Primary mathematical LaTeX manuscript
 ├── .github/
 │   └── workflows/
@@ -144,7 +146,7 @@ If you use this software, algorithm implementations, or benchmark models in your
 }
 ```
 
-Or reference the software implementation directly:
+Or reference the software computational applet directly:
 
 ```bibtex
 @software{ghulam2026software,
@@ -153,8 +155,8 @@ Or reference the software implementation directly:
   year={2026},
   publisher={Zenodo},
   version={5.0.0},
-  doi={10.5281/zenodo.22851183},
-  url={https://doi.org/10.5281/zenodo.22851183}
+  doi={10.5281/zenodo.22851432},
+  url={https://doi.org/10.5281/zenodo.22851432}
 }
 ```
 
@@ -162,5 +164,6 @@ Or reference the software implementation directly:
 
 ## License
 
-Released under the **MIT License**. See `LICENSE` for details.  
-Academic research attribution is gratefully requested.
+Released under the **Zenodo Academic Open-Access License (Creative Commons Attribution 4.0 International - CC BY 4.0)**. See `LICENSE` for details.  
+Academic research attribution to **Arya Arunachala Ananda Ghulam-e-Shah-e-Unmani** and citation of Zenodo DOI `10.5281/zenodo.22851432` is required.
+
