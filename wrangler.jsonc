@@ -4,6 +4,12 @@
   "compatibility_date": "2026-09-18",
   "main": "worker.ts",
   "workers_dev": true,
+  "routes": [
+    {
+      "pattern": "automata.bhutadamarasena.com",
+      "custom_domain": true
+    }
+  ],
   "observability": {
     "enabled": true
   },
