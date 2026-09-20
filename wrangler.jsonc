@@ -2,6 +2,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "automata-constrained-sequence-synthesis-v5",
   "compatibility_date": "2026-09-18",
+  "main": "worker.ts",
   "workers_dev": true,
   "observability": {
     "enabled": true
@@ -11,6 +12,7 @@
   },
   "assets": {
     "directory": "./dist",
+    "binding": "ASSETS",
     "not_found_handling": "single-page-application"
   }
 }
