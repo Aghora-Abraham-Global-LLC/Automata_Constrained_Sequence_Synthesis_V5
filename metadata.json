@@ -1,0 +1,8 @@
+{
+  "name": "Automata Constrained Sequence Synthesis",
+  "description": "Official First Reference Implementation: Phase-Synchronized Trajectory Optimization in Synthetic Multi-Agent Systems via Adaptive Extended Symplectic Control and Planar Braid Complexity (Version 5.0).",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

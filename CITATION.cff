@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the paper and the software reference implementation."
+title: "Phase-Synchronized Trajectory Optimization in Synthetic Multi-Agent Systems: Adaptive Extended Symplectic Control and Planar Braid Complexity (Version 5.0 Reference Implementation)"
+version: 5.0.0
+doi: 10.5281/zenodo.22851183
+date-released: 2026-09-20
+url: "https://github.com/bhutadamarasena/automata-constrained-sequence-synthesis"
+repository-code: "https://github.com/bhutadamarasena/automata-constrained-sequence-synthesis"
+license: MIT
+authors:
+  - family-names: "Ghulam-e-Shah-e-Unmani"
+    given-names: "Arya Arunachala Ananda"
+    email: "research@bhutadamarasena.com"
+    affiliation: "BhutaDamaraSena R&D Labs, Aghora Abraham Global LLC"
+keywords:
+  - "symplectic-integrators"
+  - "poincare-phase-space"
+  - "braid-group"
+  - "topological-automata"
+  - "kuramoto-synchronization"
+  - "post-newtonian-mechanics"
+  - "multi-agent-systems"
+  - "trajectory-optimization"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Ghulam-e-Shah-e-Unmani"
+      given-names: "Arya Arunachala Ananda"
+  title: "Phase-Synchronized Trajectory Optimization in Synthetic Multi-Agent Systems: Adaptive Extended Symplectic Control and Planar Braid Complexity (Version 5.0)"
+  journal: "Preprint"
+  year: 2026
+  doi: "10.5281/zenodo.22851183"

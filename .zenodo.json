@@ -1,0 +1,32 @@
+{
+  "title": "Phase-Synchronized Trajectory Optimization in Synthetic Multi-Agent Systems: Adaptive Extended Symplectic Control and Planar Braid Complexity (Version 5.0 Reference Implementation)",
+  "description": "Official reference computational platform and numerical simulation suite for Phase-Synchronized Trajectory Optimization under Symplectic and Topological Constraints in Autonomous Multi-Agent Systems (Version 5.0). Implements the Poincaré adaptive extended symplectic integrator with zero secular energy drift, C^∞ soft-minimum potentials with analytic LogSumExp gradients, post-Newtonian relativistic couplings up to 2.5PN, covariant Kuramoto synchronization on curved Riemannian manifolds, and 2D projected Artin braid group B_N deterministic topological automata.",
+  "creators": [
+    {
+      "name": "Ghulam-e-Shah-e-Unmani, Arya Arunachala Ananda",
+      "affiliation": "BhutaDamaraSena R&D Labs, Aghora Abraham Global LLC"
+    }
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "symplectic-integrators",
+    "poincare-phase-space",
+    "braid-group",
+    "topological-automata",
+    "kuramoto-synchronization",
+    "post-newtonian",
+    "multi-agent-systems",
+    "strang-splitting",
+    "computational-physics"
+  ],
+  "upload_type": "software",
+  "version": "5.0.0",
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "10.5281/zenodo.22851183",
+      "scheme": "doi"
+    }
+  ]
+}

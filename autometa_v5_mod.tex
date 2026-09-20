@@ -98,7 +98,7 @@ In this comprehensive \textbf{Version 5.0}, we present the complete theoretical 
     \item We introduce an explicit \textbf{2D Frame-Projected Braid Topology} extracting the complexity index $w_{\mathbf{n}} \in B_N$, establishing orientational robustness $\langle \mathcal{W}_{ij} \rangle$, and formally proving the deterministic completeness of the finite state machine ($B_N$-DFA) through rigorous hysteresis boundaries.
 \end{itemize}
 
----
+\bigskip
 
 \section{Covariant Phase Synchronization on Curved Manifolds \texorpdfstring{$(\Sigma, g)$}{(Sigma, g)}}
 
@@ -241,7 +241,7 @@ Because $|\delta_{ij}^g| \le \delta_{\max}^g$, the restorative factor satisfies 
 Substituting this decomposition into the expected Lyapunov derivative via Gr\"onwall's lemma confirms $\lambda_g > 0$, guaranteeing exponential convergence toward phase synchronization.
 \end{proof}
 
----
+\bigskip
 
 \section{High-Order Non-Separable Symplectic Integrator and Poincaré Adaptive Control}
 
@@ -279,7 +279,12 @@ In multi-agent systems, dynamically adapting the step size based on agent proxim
 \mathcal{R}_\beta(\bm{q}) \coloneqq -\frac{1}{\beta} \ln \left( \sum_{1 \le i < j \le N} \exp\left( -\beta \|\bm{q}_i - \bm{q}_j\| \right) \right).
 \label{eq:soft_min}
 \end{equation}
-For any finite $\beta > 0$, $\mathcal{R}_\beta(\bm{q})$ acts as a smooth lower bound that asymptotically converges to $r_{\min}(\bm{q})$ while retaining $C^\infty$ smoothness across the entire domain $\mathbb{R}^{3N}$. The structural restraint frequency for adaptive control is then defined by:
+For any finite $\beta > 0$, $\mathcal{R}_\beta(\bm{q})$ acts as a smooth lower bound that asymptotically converges to $r_{\min}(\bm{q})$ while retaining $C^\infty$ smoothness across the entire domain $\mathbb{R}^{3N}$. Furthermore, its spatial gradient is strictly analytic and readily evaluated via the softmax Boltzmann weights:
+\begin{equation}
+\nabla_{\bm{q}_i} \mathcal{R}_\beta(\bm{q}) = \sum_{j \neq i} w_{ij}(\bm{q}) \frac{\bm{q}_i - \bm{q}_j}{\|\bm{q}_i - \bm{q}_j\|}, \qquad w_{ij}(\bm{q}) \coloneqq \frac{\exp\left(-\beta \|\bm{q}_i - \bm{q}_j\|\right)}{\sum_{k < l} \exp\left(-\beta \|\bm{q}_k - \bm{q}_l\|\right)}.
+\label{eq:soft_min_gradient}
+\end{equation}
+The structural restraint frequency for adaptive control is then defined by:
 \begin{equation}
 \omega(\mathcal{R}_\beta(\bm{q})) \coloneqq \omega_0 \left[ 1 + \kappa \left( \frac{r_0}{\mathcal{R}_\beta(\bm{q}) + \epsilon} \right)^2 \right],
 \label{eq:adaptive_omega}
@@ -292,7 +297,16 @@ Because the Hamiltonian $H$ is strictly non-separable, we first employ the exten
 \bar{H}(\bm{q}, \bm{p}, \bm{x}, \bm{y}) = H_A(\bm{q}, \bm{y}) + H_B(\bm{x}, \bm{p}) + H_\omega(\bm{q}, \bm{p}, \bm{x}, \bm{y}),
 \label{eq:extended_hamiltonian}
 \end{equation}
-where $H_A(\bm{q}, \bm{y}) = \frac{1}{2} T(\bm{y}) + V(\bm{q}) + \frac{1}{2}H_{\mathrm{non-sep}}(\bm{q}, \bm{y})$ and $H_B(\bm{x}, \bm{p})$ decouple the potential evaluations, and $H_\omega = \frac{\omega}{2} \sum_{i=1}^N ( \|\bm{q}_i - \bm{x}_i\|^2 + \|\bm{p}_i - \bm{y}_i\|^2 )$ binds the trajectory to the physical constraint manifold $\mathcal{C} = \{\bm{q}=\bm{x}, \bm{p}=\bm{y}\}$.
+where the symmetric sub-Hamiltonians are explicitly defined by:
+\begin{align}
+H_A(\bm{q}, \bm{y}) &\coloneqq \frac{1}{2} T(\bm{y}) + V(\bm{q}) + \frac{1}{2} H_{\mathrm{non-sep}}(\bm{q}, \bm{y}), \label{eq:sub_ha} \\
+H_B(\bm{x}, \bm{p}) &\coloneqq \frac{1}{2} T(\bm{p}) + V(\bm{x}) + \frac{1}{2} H_{\mathrm{non-sep}}(\bm{x}, \bm{p}), \label{eq:sub_hb}
+\end{align}
+which decouple the mixed potential evaluations. On the physical constraint manifold $\mathcal{C} \coloneqq \{\bm{q}=\bm{x}, \bm{p}=\bm{y}\}$, the sum identically recovers the physical governing Hamiltonian: $H_A + H_B = H(\bm{q}, \bm{p})$. The auxiliary harmonic restraint is:
+\begin{equation}
+H_\omega(\bm{q}, \bm{p}, \bm{x}, \bm{y}) \coloneqq \frac{\omega}{2} \sum_{i=1}^N \Big( \|\bm{q}_i - \bm{x}_i\|^2 + \|\bm{p}_i - \bm{y}_i\|^2 \Big),
+\end{equation}
+which dynamically binds the trajectory to $\mathcal{C}$.
 
 To enforce confinement to $\mathcal{C}$ while enabling adaptive step sizes without breaking symplecticity~\cite{HairerLubichWanner2006}, we map the system into the \textbf{Poincaré extended phase space}. We treat physical time $t$ as a canonical coordinate and introduce its conjugate momentum $p_t$. The formal Poincaré Hamiltonian $\mathcal{K} \in C^\infty(T^*\mathbb{R}^{12N+2})$ is:
 \begin{equation}
@@ -355,7 +369,7 @@ Because the physical force gradient scales as $\|\bm{F}_{\max}\| \le C/r_{\min}^
 Because the soft-minimum mapping $\mathcal{R}_\beta(\bm{q})$ is formed exclusively by finite compositions of analytic functions $\exp(\cdot)$ and $\ln(\cdot)$, the extended vector field $X_{\mathcal{K}} = \nabla \mathcal{K} \cdot J$ is infinitely differentiable ($C^\infty$) on the phase space manifold $\mathcal{M} = T^*\mathbb{R}^{12N+2}$. Consequently, the Baker-Campbell-Hausdorff (BCH) operator expansion $\exp(\Delta \tau X_A) \exp(\Delta \tau X_B) = \exp(\Delta \tau X_{\mathrm{eff}})$ converges as a formal Lie power series. There exists an analytic shadow Hamiltonian $H_{\mathrm{shadow}}(\bm{q}, \bm{p}) = H(\bm{q}, \bm{p}) + \mathcal{O}(\Delta \tau^2)$ strictly conserved over exponentially long time scales $\mathcal{O}(\exp(1/\Delta \tau))$, producing zero secular linear drift over $10^7$ orbits.
 \end{theorem}
 
----
+\bigskip
 
 \section{2D Frame-Projected Interaction Braid Topology and \texorpdfstring{$B_N$}{BN}-DFA}
 
@@ -399,9 +413,9 @@ The states $Q = \{S_0, S_1, S_2, S_3, S_4\}$ classify configurations from Hierar
 \midrule
 $S_0$ (Hierarchical) & $S_1$ (Resonant) & $S_0$ & $S_0$ & $S_4$ & $S_0$ \\
 \addlinespace
-$S_1$ (Resonant Chaos) & $S_1$ & $S_0$ & $S_2$ (Exchange) & $S_4$ & $S_3 \text{ (if } r \gg r_c \text{)}$ \\
+$S_1$ (Resonant Chaos) & $S_1$ & $S_0$ & $S_2$ (Exchange) & $S_4$ & $S_3 \text{ (Unbound)}$ \\
 \addlinespace
-$S_2$ (Exchange) & $S_2$ & $S_0$ & $S_1$ (Swap resolves) & $S_4$ & $S_3 \text{ (if } v > v_{\mathrm{esc}}\text{)}$ \\
+$S_2$ (Exchange) & $S_2$ & $S_0$ & $S_1$ (Swap resolves) & $S_4$ & $S_3 \text{ (Unbound)}$ \\
 \addlinespace
 $S_3$ (Escape) & $S_3$ & $S_3$ & $S_3$ & $S_3$ & $S_3 \text{ (Accepting)}$ \\
 \addlinespace
@@ -416,7 +430,7 @@ $S_4$ (Coalescence Sink) & $S_4$ & $S_4$ & $S_4$ & $S_4 \text{ (Sink)}$ & $S_4$ 
 Because the transition triggers utilize strictly non-overlapping thresholds separated by the defined hysteresis gap $\mathcal{H}_{\mathrm{ratio}} \in (2.5, 8.0)$ (wherein the internal state remains invariant unless an explicit topological braid crossing $\sigma_k$ is detected), the input alphabet $\Sigma_{\mathrm{in}}$ is mutually exclusive and exhaustive over the trajectory state space. Therefore, the transition function $\delta: Q \times \Sigma_{\mathrm{in}} \to Q$ is total, surjective, and deterministic, guaranteeing the DFA completely partitions all possible continuous trajectories while remaining strictly free of infinite-frequency Zeno chatter.
 \end{theorem}
 
----
+\bigskip
 
 \section{Numerical Verification and Benchmarks}
 
@@ -483,6 +497,7 @@ The V5.0 integrator leverages the $C^\infty$ soft-minimum adaptive control to re
     xmin=1e2, xmax=1e5,
     ymin=1e-12, ymax=1e-4,
     xlabel={Control Cycles},
+    ylabel={Fractional Error},
     title={Angular Momentum $\vert \Delta L / L_0 \vert$},
     grid=both,
     legend pos=south east,
@@ -594,13 +609,19 @@ Tao Extended V2.0 ($\omega_0 = 100$) & $5.8 \times 10^{-3} \, \mathrm{rad}$ & $0
 
 As summarized in Table~\ref{tab:phase_error_table}, classical RK4 accumulates substantial dephasing ($\Delta \Phi > 90 \, \mathrm{rad}$), causing complete coordinate decorrelation ($\mathcal{F} < 0.85$). By contrast, \textbf{V5.0} maintains exquisite phase fidelity, restricting total dephasing to $\Delta \Phi \le 0.041 \, \mathrm{rad}$ and achieving an overlap of $\mathcal{F} = 0.9992$. This provides definitive empirical verification that incorporating conservative non-separable couplings within an adaptive Poincaré quasi-symplectic framework preserves multi-agent coordination over deep optimization timescales.
 
----
+\bigskip
 
 \appendix
 
-\section{Algorithmic Implementation and Document Rendering Environments}
+\section{Algorithmic Implementation, Interactive Reference Platform, and Document Rendering}
 \label{app:rendering}
-To guarantee computational transparency and allow peers to independently reproduce the empirical benchmarks presented in Section 5, we have archived the exact simulation state configurations in a supplemental data repository (accessible via \url{https://github.com/Aghora-Abraham-Global-LLC/Automata_Constrained_Sequence_Synthesis_V5}). The standardized initial condition vectors are defined purely via Cartesian projections compatible with the defined planar interaction observer vector $\mathbf{n}$.
+To guarantee computational reproducibility and facilitate peer examination, the complete algorithmic suite has been deployed as an open-source, client-side interactive reference application:
+\begin{itemize}
+    \item \textbf{Reference Implementation Source Repository:} \url{https://github.com/Aghora-Abraham-Global-LLC/Automata_Constrained_Sequence_Synthesis_V5}
+    \item \textbf{Permanent Academic Archival (Zenodo DOI):} \href{https://doi.org/10.5281/zenodo.22851183}{10.5281/zenodo.22851183}
+    \item \textbf{Interactive Web Simulation Platform:} Features real-time Poincaré phase portraits, dynamic $SO(3)$ spin precession, projected $B_N$ braid word generator, and live diagnostic monitoring of the shadow Hamiltonian.
+\end{itemize}
+All initial condition vectors and test configurations in Section~\ref{subsec:sim_config} can be executed deterministically in the client environment with zero external API dependencies.
 
 \section*{Acknowledgments}
 The author expresses profound gratitude to the researchers and staff at BhutaDamaraSena R\&D Labs and Aghora Abraham Global LLC for their computational resources (especially the Multi-Agent Tribody Relativistic Testing Engine and Relativistic PNT engine) and continued support.
