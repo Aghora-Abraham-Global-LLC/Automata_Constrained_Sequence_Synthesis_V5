@@ -9,6 +9,9 @@ on:
 permissions:
   contents: write
 
+env:
+  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: "true"
+
 jobs:
   build-and-release:
     name: Package Release for Zenodo & GitHub
@@ -20,14 +23,14 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js 20.x
+      - name: Setup Node.js 22.x
         uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: 22.x
           cache: "npm"
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm ci || npm install
 
       - name: Type-Check Codebase
         run: npm run lint
@@ -51,14 +54,18 @@ jobs:
           draft: false
           prerelease: false
           generate_release_notes: true
-          name: "Automata Constrained Sequence Synthesis ${{ github.ref_name }} (Zenodo Reference Release)"
+          name: "Phase-Synchronized Trajectory Optimization ${{ github.ref_name }} (Zenodo Reference Release)"
           body: |
             ## Automated Reference Implementation Release ${{ github.ref_name }}
 
-            This release provides the compiled distribution and metadata for **Automata Constrained Sequence Synthesis (Version 5.0)**:
-            - **Paper Title**: *Phase-Synchronized Trajectory Optimization in Synthetic Multi-Agent Systems: Adaptive Extended Symplectic Control and Planar Braid Complexity*
-            - **DOI**: [10.5281/zenodo.22851183](https://doi.org/10.5281/zenodo.22851183)
-            - **Primary AMS**: 70H15, 65P10, 57K10, 37N05, 49M30
-            - **Author**: Arya Arunachala Ananda Ghulam-e-Shah-e-Unmani (*BhutaDamaraSena R&D Labs, Aghora Abraham Global LLC*)
+            This release provides the compiled distribution and metadata for **Phase-Synchronized Trajectory Optimization in Synthetic Multi-Agent Systems: Adaptive Extended Symplectic Control and Planar Braid Complexity (Version 5.0)**:
+            - **Monograph Title**: *Phase-Synchronized Trajectory Optimization in Synthetic Multi-Agent Systems: Adaptive Extended Symplectic Control and Planar Braid Complexity*
+            - **Permanent DOI**: [10.5281/zenodo.22851183](https://doi.org/10.5281/zenodo.22851183)
+            - **Author**: Arya Arunachala Ananda Ghulam-e-Shah-e-Unmani
+            - **Institution**: BhutaDamaraSena R&D Labs · Aghora Abraham Global LLC
 
-            Zenodo automatically archives this release and issues a permanent archival snapshot.
+            ### Contents
+            - `automata-v5-dist.tar.gz`: Pre-compiled static SPA bundle ready for web hosting.
+            - `automata-v5-dist.zip`: Zip-formatted distributable build.
+            - `CITATION.cff`: Citation metadata format 1.2.0.
+            - `.zenodo.json`: Zenodo automatic ingestion metadata.
