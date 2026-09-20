@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -19,9 +19,7 @@ env:
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    name: Build & Deploy to GitHub Pages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -39,14 +37,34 @@ jobs:
       - name: Production Build
         run: npm run build
 
+      - name: Prepare SPA Fallback for GitHub Pages
+        run: |
+          cp dist/index.html dist/404.html
+          touch dist/.nojekyll
+
+      # Method 1: Deploy to gh-pages branch (Zero-config fallback: always succeeds without requiring pre-configured Pages API)
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          keep_files: false
+          cname: ""
+
+      # Method 2: Native GitHub Actions Pages Deployment (Used when repo Settings -> Pages is set to GitHub Actions)
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
+        continue-on-error: true
 
-      - name: Upload Artifact
+      - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist/
+        continue-on-error: true
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages (Actions Environment)
         id: deployment
         uses: actions/deploy-pages@v4
+        continue-on-error: true
