@@ -1,0 +1,19 @@
+name = "automata-constrained-sequence-synthesis-v5"
+main = "worker.ts"
+compatibility_date = "2026-09-18"
+workers_dev = true
+
+[observability]
+enabled = true
+
+[build]
+command = "npm run build"
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
+[[routes]]
+pattern = "automata.bhutadamarasena.com"
+custom_domain = true
